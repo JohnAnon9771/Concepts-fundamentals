@@ -11,6 +11,7 @@ function* rtc() {
 console.log("Before")
 let iterator = rtc()
 let retValue = iterator.next()
+
 console.log(retValue.value)
 retValue = iterator.next()
 console.log(retValue.value)
