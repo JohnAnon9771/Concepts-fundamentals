@@ -11,7 +11,7 @@
 // [ 'shout', 'sun' ]
 function reduce(reducer, initial, arr) {
   let acc = initial
-  for (let i = 0, {length} = arr; i < length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     acc = reducer(acc, arr[i])
   }
   return acc
@@ -30,3 +30,4 @@ const censor = (words) => filter(words, (word) => word.length !== 4)
 console.log(censor(["oops", "gasp", "shout", "sun"]))
 
 // Curry and functions composition
+const sumValues = (num1) => (num2) => num1 + num2
