@@ -3,7 +3,10 @@
 Programação funcional se baseia em alguns conceitos principais:
 
 - Função pura
--
+- Sem estado compartilhado
+- Dados imutaveis
+- Sem efeitos colaterais
+- Declarativa
 
 ## High Order Functions
 
