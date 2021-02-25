@@ -31,3 +31,15 @@ console.log(censor(["oops", "gasp", "shout", "sun"]))
 
 // Curry and functions composition
 const sumValues = (num1) => (num2) => num1 + num2
+
+//Point-free style
+// declaração comum
+
+function anything(/* parametros aqui*/) {}
+const anything2 = (/* parametros aqui */) => {}
+const anything3 = function (/* parametros aqui */) {}
+
+const add = (a) => (b) => a + b
+// Inc10 será uma função que sempre adicionará mais 10 aos seus argumentos.
+// Nesse caso inc10 é uma função que foi declarada sem referência aos seus parametros.
+const inc10 = add(10)
