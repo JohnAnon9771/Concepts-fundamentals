@@ -106,3 +106,13 @@ const add = (a) => (b) => a + b
 // Nesse caso inc10 é uma função que foi declarada sem referência aos seus parametros.
 const inc10 = add(10)
 ```
+
+Com esse conceito, podemos criar funções especializadas, como a <code>inc10()</code> que se tornou uma função especializada da <code>add()</code>, assim podemos fazer quantas funções especializadas quisermos.
+
+```js
+const inc20 = add(20)
+const inc30 = add(30)
+//...
+```
+
+<em>Todas as funções curried são uma forma de função de ordem superior que permite criar versões especializadas da função original para o caso de uso específico em questão.</em>
