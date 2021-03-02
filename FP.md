@@ -232,9 +232,9 @@ Uma boa abordagem para sempre criar funções que recebam os argumentos de forma
 
 # Resumo
 
-<strong>Functions curried: </strong> Uma função que recebe vários argumentos um por vez e retornando funções para os proximos argumentos, ótimo para criar funções especializadas.
-<strong>Partial Application: </strong> É uma função que é aplicada a alguns, mas não a todos os argumentos. Os argumentos aos quais a função já foi aplicada são chamados de parâmetros fixos.
-<strong>Point-free style: </strong> É uma forma de definir uma função sem referência a seus argumentos. Geralmente, uma função sem ponto é criada chamando uma função que retorna uma função, como uma função curried.
+<strong>Functions curried: </strong> Uma função que recebe vários argumentos um por vez e retornando funções para os proximos argumentos, ótimo para criar funções especializadas. <br />
+<strong>Partial Application: </strong> É uma função que é aplicada a alguns, mas não a todos os argumentos. Os argumentos aos quais a função já foi aplicada são chamados de parâmetros fixos. <br />
+<strong>Point-free style: </strong> É uma forma de definir uma função sem referência a seus argumentos. Geralmente, uma função sem ponto é criada chamando uma função que retorna uma função, como uma função curried. <br />
 <strong>Data last functions: </strong> É uma forma de idealizar a criaçao de funções curried, para que sempre ocorra a especialização de forma correta.
 
 ## Extra
