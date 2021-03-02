@@ -123,19 +123,19 @@ const inc30 = add(30)
 
 Uma função pode receber qualquer número de entradas, mas só pode retornar uma única saída. Para que as funções sejam compostas, o tipo de saída deve estar alinhado com o tipo de entrada esperado:
 
-<code>
-f: a => b 
-g: b => c 
+```
+f: a => b
+g: b => c
 h: a => c
-</code>
+```
 
 Se a função <code>g</code> acima esperava dois parâmetros, a saída de <code>f</code> não se alinharia com a entrada para <code>g</code>:
 
-<code>
-f: a => b 
-g: (x, b) => c 
+```
+f: a => b
+g: (x, b) => c
 h: a => c
-</code>
+```
 
 Lembre-se de que a definição de uma função curried é uma função que usa vários parâmetros, um de cada vez, pegando o primeiro argumento e retornando uma série de funções, cada uma das quais leva o próximo argumento até que todos os parâmetros tenham sido coletados. Então para usar funções dentro de funções curry, sempre faça funções curry para utilizar o poder total desse estilo.
 
