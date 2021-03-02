@@ -43,3 +43,17 @@ const add = (a) => (b) => a + b
 // Inc10 será uma função que sempre adicionará mais 10 aos seus argumentos.
 // Nesse caso inc10 é uma função que foi declarada sem referência aos seus parametros.
 const inc10 = add(10)
+
+// Why use Curry
+
+// g: a -> b
+// f: b -> c
+
+const g = (n) => n + 1
+const f = (n) => n * 2
+
+const h = (x) => f(g(x))
+
+// h(20) -> 42
+
+const compose = (...fns) => (x) => fns.reduceRight((y, f) => f(y), x)
