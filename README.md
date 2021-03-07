@@ -11,3 +11,7 @@ Boa refência: [Sun's Multithreaded Programming Guide](https://docs.oracle.com/c
 ## Parallelism
 
 Paralelismo é quando as tarefas literalmente são executadas ao mesmo tempo, por exemplo, em um processador multicore.
+
+## Contents
+
+- [Functional Programing](https://github.com/JohAnon9771/Concepts-fundamentals/functional-programming/readme.md)
