@@ -63,20 +63,6 @@ const censor = (words) => filter(words, (word) => word.length !== 4)
 
 Nesse exemplo, podemos perceber um bom nivel de abstração. A função censor está totalmente livre de suas responsabilidades e apenas filtra o que deseja com a função filter que pode ser usada em qualquer valor. A função de ordem superior <code>reduce</code> é uma abstração da responsabilidade de iterar sobre o array e selecionar os desejados, mas essa responsabilidade de saber quem deve ser selecionado fica por conta da função que recebe por argumentos <code>reducer</code>.
 
-## Curry and Composition functions
-
-Funções curried são funções que recebem um argumento por vez. Por exemplo:
-
-```js
-const add = (a) => (b) => a + b
-
-console.log(add(5)(2)) // 7
-```
-
-Para fazer chamar essas funções você pode utilizar a syntax de <strong>application functions</strong>. Em JavaScript, os parênteses <code>()</code> após a referência de função acionam a invocação da função.
-
-Esse estilo de declaração de função é extremamente atrelada com o conceito de <strong>clousures</strong> (Abordarei esse conceito em outro topico).
-
 # Parcial Application
 
 Uma aplicação parcial é uma função que foi aplicada a alguns, mas ainda não a todos os seus argumentos. Em outras palavras, é uma função que possui alguns argumentos fixos dentro de seu escopo de encerramento. Uma função com alguns de seus parâmetros fixos é considerada parcialmente aplicada .
@@ -119,6 +105,19 @@ const inc30 = add(30)
 
 # Composition function and Curry
 
+Funções curried são funções que recebem um argumento por vez. Por exemplo:
+
+```js
+const add = (a) => (b) => a + b
+
+console.log(add(5)(2)) // 7
+```
+
+Para fazer chamar essas funções você pode utilizar a syntax de <strong>application functions</strong>. Em JavaScript, os parênteses <code>()</code> após a referência de função acionam a invocação da função.
+
+Esse estilo de declaração de função é extremamente atrelada com o conceito de <strong>clousures</strong> (Abordarei esse conceito em outro topico).
+
+<hr>
 <strong>Curry</strong> é otimo para composição de função. Além disso, fora do contexto de composição, <strong>curry</strong> é perfeito para <strong>point-free style</strong>, ou seja, especialização. Contudo, o real poder das <strong>function curry</strong> é na composição de função, pela simplificação.
 
 Uma função pode receber qualquer número de entradas, mas só pode retornar uma única saída. Para que as funções sejam compostas, o tipo de saída deve estar alinhado com o tipo de entrada esperado:
@@ -146,7 +145,10 @@ g: x => b => c
 As palavras-chave dessa definição são “uma de cada vez”. A razão pela qual funções curried são tão convenientes para composição de função é que elas transformam funções que esperam vários parâmetros em funções que podem receber um único argumento, permitindo que elas se encaixem em um pipeline de composição de função. Tome a função <code>trace</code> como um exemplo[0]:
 
 ```js
-const pipe = (...fns) => (x) => fns.reduce((y, f) => f(y), x)
+const pipe =
+  (...fns) =>
+  (x) =>
+    fns.reduce((y, f) => f(y), x)
 
 const trace = (label) => (value) => {
   console.log(`${label}: ${value}`)
@@ -169,7 +171,10 @@ after f: 42
 A função <code>trace</code> define dois parâmetros, mas os leva um de cada vez, o que nos permite especializar a função embutida. Se <code>trace</code> não tivesse curry, não poderíamos usá-lo dessa forma. Teríamos que escrever o pipeline assim:
 
 ```js
-const pipe = (...fns) => (x) => fns.reduce((y, f) => f(y), x)
+const pipe =
+  (...fns) =>
+  (x) =>
+    fns.reduce((y, f) => f(y), x)
 
 const trace = (label, value) => {
   console.log(`${label}: ${value}`)
@@ -201,7 +206,10 @@ after f: 42
 Curry não é a única coisa que você se deve se atentar, você também precisa se certificar de que a função está esperando parâmetros na ordem correta para especializá-los, se a ordem for inversa, ficaria assim:
 
 ```js
-const pipe = (...fns) => (x) => fns.reduce((y, f) => f(y), x)
+const pipe =
+  (...fns) =>
+  (x) =>
+    fns.reduce((y, f) => f(y), x)
 
 const trace = (value) => (label) => {
   console.log(`${label}: ${value}`)
