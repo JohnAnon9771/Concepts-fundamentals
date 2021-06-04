@@ -39,7 +39,7 @@ function censor(words) {
 }
 ```
 
-Ok, é uma função normal, mas e se quisermos que ela trouxesse apenas o valores que começassem com 's'? No caso teriamos que criar outra função com essa nova condição.. Mas com funções de ordem superior, podemos abstrair essas condições para funções recebidas nos parametros, assim a função tem mais flexibilidade e menos regra impostas nela.
+Ok, é uma função normal, mas e se quisermos que ela trouxesse apenas o valores que começassem com 's'? No caso teriamos que criar outra função com essa nova condição.. Mas com funções de ordem superior, podemos abstrair essas condições para funções recebidas nos parametros, assim a função tem mais flexibilidade e menos regras impostas nela.
 
 ```js
 function reduce(reducer, initial, arr) {
@@ -73,7 +73,7 @@ Aplicativos parciais podem levar tantos ou poucos argumentos por vez, conforme d
 
 <em>Todas as funções curried retornam aplicativos parciais, mas nem todos os aplicativos parciais são o resultado de funções curried.</em>
 
-# point-free style
+# Point-free style
 
 Esse conceito se basea na declaração de funções que não fazem referência aos seus parametros, ou seja, não tem "noção" de seus parametros.
 
@@ -236,7 +236,7 @@ after f: 42
 */
 ```
 
-Uma boa abordagem para sempre criar funções que recebam os argumentos de forma ideal para a especialização, é pensar em "dados por ultimo" (data last), o que significa que você deve pegar os parâmetros de especialização primeiro e pegar os dados nos quais a função atuará por último.
+Uma boa abordagem para sempre criar funções que recebam os argumentos de forma ideal para a especialização, é pensar em **"dados por ultimo"** (data last), o que significa que você deve pegar os parâmetros de especialização primeiro e pegar os dados nos quais a função atuará por último.
 
 # Resumo
 
@@ -248,3 +248,5 @@ Uma boa abordagem para sempre criar funções que recebam os argumentos de forma
 ## Extra
 
 Funções curried são boas para composições, por que convertem facilmente funções n-ária em funções unárias, necessárias para pipelines de composição de funções.
+
+[Aqui]() está alguns exercicios usando uma linguagem **totalmente funcional (Haskell)** e uma de **multiparadigma (Javascript)**.
