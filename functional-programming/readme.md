@@ -249,4 +249,4 @@ Uma boa abordagem para sempre criar funções que recebam os argumentos de forma
 
 Funções curried são boas para composições, por que convertem facilmente funções n-ária em funções unárias, necessárias para pipelines de composição de funções.
 
-[Aqui]() está alguns exercicios usando uma linguagem **totalmente funcional (Haskell)** e uma de **multiparadigma (Javascript)**.
+[Aqui](https://github.com/JohnAnon9771/Concepts-fundamentals/blob/main/functional-programming/pratices/readme.md) está alguns exercicios usando uma linguagem **totalmente funcional (Haskell)** e uma de **multiparadigma (Javascript)**.
