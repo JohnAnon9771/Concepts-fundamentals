@@ -2,7 +2,7 @@
 
 Esse **README** é dedicado aos exercicios que estou realizando, nele irei detalhar pensamentos de implementação com algoritmos tanto em haskell como em javascript.
 
-Nesse exercicio como em todos os outros que irei fazer, pensarei em soluções totalmente funcionais no javascript, já que no haskell é a unica opção ;-;
+Em todos os exercicios pensarei em soluções totalmente funcionais no javascript, já que no haskell é a unica opção ;-;
 
 **A separação será por categorias:**
 
