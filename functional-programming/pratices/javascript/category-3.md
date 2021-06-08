@@ -1,14 +1,11 @@
 ## **Categoria 3**
 
-<hr>
+Comentarei nas questões que apenas tiverem algo novo a ser citado.
 
 ### @004 countNeg
 
-Nesse exercicio como em todos os outros que irei fazer, pensarei em soluções totalmente funcionais no javascript, já que no haskell é a unica opção ;-;
-
 ```js
 // Javascript
-// @004 countNeg
 const isNeg = (number) => number < 0
 const countNeg = (arr) => arr.filter(isNeg).length
 ```
