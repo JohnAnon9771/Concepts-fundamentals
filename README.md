@@ -15,3 +15,4 @@ Paralelismo é quando as tarefas literalmente são executadas ao mesmo tempo, po
 ## Contents
 
 - [Functional Programming](https://github.com/JohnAnon9771/Concepts-fundamentals/tree/main/functional-programming)
+- [OOP](https://github.com/JohnAnon9771/Concepts-fundamentals/tree/main/oop)
